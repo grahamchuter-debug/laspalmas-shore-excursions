@@ -162,11 +162,6 @@ export const mediterraneanLinks = [
     description: "Atlantic garden island planning context for repositioning routes.",
   },
   {
-    title: "Cadiz Shore Excursions",
-    href: "https://cadizshoreexcursions.com",
-    description: "Mainland Spain counterpart for itinerary balancing.",
-  },
-  {
     title: "Spain Cruise Guide",
     href: "https://spaincruiseguide.com",
     description: "Multi-port Spain planning framework for cruise travellers.",
