@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { subjectImages } from "@/lib/images";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 
 const CHOOSE_CARDS = [
   {
@@ -135,11 +136,10 @@ export function ChooseYourGranCanaria() {
                 <div
                   className={`relative overflow-hidden ${card.wide ? "aspect-[21/9]" : "aspect-[16/10]"}`}
                 >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
+                  <ResponsiveImage
+                    image={image}
+                    role="card"
+                    imgClassName="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-coastal-900/80 via-coastal-900/25 to-transparent"

@@ -52,7 +52,7 @@ export async function generateMetadata({
   const year = parseScheduleYear(segment);
   if (year) {
     return buildMetadata({
-      title: `${port.name} Cruise Ship Schedule ${year}`,
+      title: `${port.name} Cruise Ship Schedule ${year} — Calendar`,
       description: `${port.name} cruise ship arrivals and departures for ${year}. Plan shore excursions around published port times.`,
       path: portYearPath(slug, year),
     });

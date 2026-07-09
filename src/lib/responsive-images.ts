@@ -70,7 +70,6 @@ export function getResponsiveSources(base: string, role: ImageRole): ResponsiveS
 
   const displayWidth = Math.min(entry.fallbackWidth, cap);
   const displayHeight = Math.round((entry.height / entry.width) * displayWidth);
-
   const widths = widthsForRole(base, role);
   const largest = widths[widths.length - 1] ?? displayWidth;
 

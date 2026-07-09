@@ -5,7 +5,7 @@ export const highlights: AttractionPage[] = [
     slug: "roque-nublo-from-cruise-ship",
     title: "Roque Nublo from Las Palmas Cruise Port",
     seoTitle: "Roque Nublo from Las Palmas Cruise Port — Gran Canaria Mountain Guide",
-    metaDescription: "Visit Roque Nublo from Las Palmas cruise port with realistic coach times, walking advice and return-to-ship strategy for Gran Canaria's iconic volcanic monolith.",
+    metaDescription: "Visit Roque Nublo from Las Palmas cruise port with realistic coach times, walking advice and return-to-ship strategy for Gran Canaria's iconic volcanic…",
     attractionName: "Roque Nublo",
     tagline: "Gran Canaria's sacred volcanic sentinel — dramatic highland scenery above the clouds.",
     overview: "Roque Nublo is Gran Canaria's defining natural landmark: an 80-metre basalt monolith rising from a high-altitude plateau at roughly 1,800 metres. For cruise passengers it represents the island at its most dramatic — volcanic, Atlantic and utterly unlike a generic beach port.",

@@ -1,5 +1,6 @@
 import type { SiteImage } from "@/lib/images";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { PreloadImage } from "@/components/PreloadImage";
 
 export function ComparisonHeroBand({
   image,
@@ -16,12 +17,13 @@ export function ComparisonHeroBand({
     <section
       className={`relative overflow-hidden text-white ${compact ? "py-14 sm:py-16" : "py-20 sm:py-28"}`}
     >
+      <PreloadImage base={image.base} role="guide" />
       <ResponsiveImage
         image={image}
         role="guide"
         priority
         className="absolute inset-0 block h-full w-full"
-        imgClassName="h-full w-full object-cover"
+        imgClassName="absolute inset-0 h-full w-full object-cover"
       />
       <div className="hero-overlay absolute inset-0" aria-hidden="true" />
       <div className="container-wide relative z-10 px-4 sm:px-6 lg:px-8">

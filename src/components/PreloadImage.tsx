@@ -6,12 +6,7 @@ interface PreloadImageProps {
   role?: ImageRole;
 }
 
-function preloadLink(
-  href: string,
-  srcSet: string,
-  sizes: string,
-  media: string,
-) {
+function preloadLink(href: string, srcSet: string, sizes: string, media: string) {
   return (
     <link
       key={media}
@@ -26,7 +21,7 @@ function preloadLink(
   );
 }
 
-/** Renders hoisted <link rel="preload"> for LCP images (homepage hero). */
+/** Renders hoisted link rel="preload" for LCP images (homepage hero). */
 export function PreloadImage({ base, role = "hero" }: PreloadImageProps) {
   const sources = getResponsiveSources(base, role);
   if (!sources.srcSetAvif) return null;
@@ -39,8 +34,7 @@ export function PreloadImage({ base, role = "hero" }: PreloadImageProps) {
   const mobile = avifParts.filter((p) => p.w <= 640);
   const desktop = avifParts.filter((p) => p.w > 640);
 
-  const toSet = (parts: typeof avifParts) =>
-    parts.map((p) => `${p.url} ${p.w}w`).join(", ");
+  const toSet = (parts: typeof avifParts) => parts.map((p) => `${p.url} ${p.w}w`).join(", ");
 
   const mobileHref = mobile[mobile.length - 1]?.url ?? sources.preloadAvif;
   const desktopHref = desktop[desktop.length - 1]?.url ?? sources.preloadAvif;

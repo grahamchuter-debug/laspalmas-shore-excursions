@@ -1,6 +1,6 @@
-import { siteImages } from "@/lib/images";
+import { siteImages, type SiteImage } from "@/lib/images";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
-import type { SiteImage } from "@/lib/images";
+import { PreloadImage } from "@/components/PreloadImage";
 import { imageBaseFromSrc } from "@/lib/responsive-images";
 
 interface PageHeroProps {
@@ -9,7 +9,9 @@ interface PageHeroProps {
   children?: React.ReactNode;
   compact?: boolean;
   image?: SiteImage;
+  /** @deprecated Prefer `image` prop */
   imageSrc?: string;
+  /** @deprecated Prefer `image` prop */
   imageAlt?: string;
 }
 
@@ -22,22 +24,23 @@ export function PageHero({
   imageSrc = siteImages.hero.src,
   imageAlt = siteImages.hero.alt,
 }: PageHeroProps) {
-  const heroImage: SiteImage =
-    image ??
-    (imageSrc === siteImages.hero.src
-      ? siteImages.hero
-      : { base: imageBaseFromSrc(imageSrc), src: imageSrc, alt: imageAlt });
+  const resolvedImage: SiteImage = image ?? {
+    base: imageBaseFromSrc(imageSrc),
+    src: imageSrc,
+    alt: imageAlt,
+  };
 
   return (
     <section
       className={`relative overflow-hidden text-white ${compact ? "py-14 sm:py-16" : "py-20 sm:py-28"}`}
     >
+      <PreloadImage base={resolvedImage.base} role="hero" />
       <ResponsiveImage
-        image={heroImage}
+        image={resolvedImage}
         role="hero"
         priority
         className="absolute inset-0 block h-full w-full"
-        imgClassName="h-full w-full object-cover"
+        imgClassName="absolute inset-0 h-full w-full object-cover"
       />
       <div className="hero-overlay" aria-hidden="true" />
       <div className="container-wide relative z-10 px-4 sm:px-6 lg:px-8">

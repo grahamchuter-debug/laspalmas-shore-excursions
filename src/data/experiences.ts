@@ -5,7 +5,7 @@ export const experiencePages: GuidePage[] = [
     slug: "independent-las-palmas-guide",
     title: "Independent Las Palmas Guide for Cruise Passengers",
     seoTitle: "Independent Las Palmas Cruise Guide — Walks, Taxis, Food and Return Timing",
-    metaDescription: "The comprehensive independent Las Palmas cruise guide: dock location, walk/taxi/bus, Vegueta, Triana, Las Canteras, Santa Catalina, markets, cafés, tapas, shopping, taxi expectations and return advice.",
+    metaDescription: "The comprehensive independent Las Palmas cruise guide: dock location, walk/taxi/bus, Vegueta, Triana, Las Canteras, Santa Catalina, markets, cafés, tapas,…",
     tagline: "A full self-guided blueprint from gangway to all-aboard.",
     overview: "Las Palmas is one of the most rewarding Canary Islands ports for confident independent exploration. This guide gives you a realistic self-guided framework from Muelle Santa Catalina to core landmarks and back with safety margin.",
     body: [

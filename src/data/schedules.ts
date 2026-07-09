@@ -37,7 +37,7 @@ export const schedulePorts: ShipSchedulePort[] = [
     slug: "laspalmas",
     name: "Las Palmas de Gran Canaria",
     country: "Spain",
-    seoTitle: "Las Palmas Cruise Ship Schedule 2026",
+    seoTitle: "Las Palmas Cruise Ship Schedule Overview",
     metaDescription:
       "Las Palmas de Gran Canaria cruise ship schedule with arrival/departure planning tips for city highlights and island excursions.",
     intro:
