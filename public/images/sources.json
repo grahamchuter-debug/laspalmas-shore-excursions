@@ -1,0 +1,18 @@
+{
+  "platform": "Wikimedia Commons",
+  "license": "Various CC licenses — see source URLs",
+  "images": [
+    {
+      "file": "food.jpg",
+      "commons": "File:Mojo verde y papas arrugás.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Mojo_verde_y_papas_arrug%C3%A1s.jpg",
+      "license": "CC BY-SA 2.0"
+    },
+    {
+      "file": "wine.jpg",
+      "commons": "File:Queso de Flor (Gran Canaria).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Queso_de_Flor_(Gran_Canaria).jpg",
+      "license": "CC BY-SA 3.0"
+    }
+  ]
+}

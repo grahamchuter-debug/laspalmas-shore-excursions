@@ -1,0 +1,6 @@
+# Canonical host redirect: www -> non-www (301)
+https://www.laspalmasshoreexcursions.com/*  https://laspalmasshoreexcursions.com/:splat  301!
+http://www.laspalmasshoreexcursions.com/*   https://laspalmasshoreexcursions.com/:splat  301!
+
+# HTTP -> HTTPS fallback
+http://laspalmasshoreexcursions.com/*       https://laspalmasshoreexcursions.com/:splat  301!

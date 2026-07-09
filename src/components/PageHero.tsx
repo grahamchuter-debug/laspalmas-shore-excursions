@@ -1,0 +1,56 @@
+import { siteImages } from "@/lib/images";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
+import type { SiteImage } from "@/lib/images";
+import { imageBaseFromSrc } from "@/lib/responsive-images";
+
+interface PageHeroProps {
+  title: string;
+  subtitle?: string;
+  children?: React.ReactNode;
+  compact?: boolean;
+  image?: SiteImage;
+  imageSrc?: string;
+  imageAlt?: string;
+}
+
+export function PageHero({
+  title,
+  subtitle,
+  children,
+  compact,
+  image,
+  imageSrc = siteImages.hero.src,
+  imageAlt = siteImages.hero.alt,
+}: PageHeroProps) {
+  const heroImage: SiteImage =
+    image ??
+    (imageSrc === siteImages.hero.src
+      ? siteImages.hero
+      : { base: imageBaseFromSrc(imageSrc), src: imageSrc, alt: imageAlt });
+
+  return (
+    <section
+      className={`relative overflow-hidden text-white ${compact ? "py-14 sm:py-16" : "py-20 sm:py-28"}`}
+    >
+      <ResponsiveImage
+        image={heroImage}
+        role="hero"
+        priority
+        className="absolute inset-0 block h-full w-full"
+        imgClassName="h-full w-full object-cover"
+      />
+      <div className="hero-overlay" aria-hidden="true" />
+      <div className="container-wide relative z-10 px-4 sm:px-6 lg:px-8">
+        <h1 className="font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl max-w-3xl">
+          {title}
+        </h1>
+        {subtitle && (
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg">
+            {subtitle}
+          </p>
+        )}
+        {children && <div className="mt-8">{children}</div>}
+      </div>
+    </section>
+  );
+}
