@@ -1,0 +1,10 @@
+{
+  "port": "las-palmas",
+  "year": 2028,
+  "wave": "wave-1d",
+  "filterDecision": "HOLD",
+  "filterReason": "validated 10 < MIN_PUBLISH_ROWS 15 — HOLD; restricted rows NOT reintroduced",
+  "validatedCount": 10,
+  "tier2KeysApplied": [],
+  "total": 139
+}

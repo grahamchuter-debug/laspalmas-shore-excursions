@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-09-18T07:43:29.254Z",
+  "wave": "wave-1d",
+  "port": "las-palmas",
+  "destSlug": "las-palmas",
+  "displayName": "Las Palmas",
+  "counts": {
+    "2026": 119,
+    "2027": 282,
+    "2028_discovery": 139,
+    "2028_published": 0,
+    "public_total": 401,
+    "h1_2026": 0
+  },
+  "partial2026": true,
+  "filter2028": {
+    "decision": "HOLD",
+    "reason": "validated 10 < MIN_PUBLISH_ROWS 15 — HOLD; restricted rows NOT reintroduced",
+    "validatedCount": 10,
+    "tier2PrincessKeys": 0
+  },
+  "timeCompleteness": {
+    "2026": {
+      "total": 119,
+      "arrival": 60,
+      "departure": 91,
+      "both": 59,
+      "neither": 27,
+      "pctBoth": 49.6
+    },
+    "2027": {
+      "total": 282,
+      "arrival": 120,
+      "departure": 224,
+      "both": 117,
+      "neither": 55,
+      "pctBoth": 41.5
+    },
+    "2028": {
+      "total": 0,
+      "arrival": 0,
+      "departure": 0,
+      "both": 0,
+      "neither": 0,
+      "pctBoth": 0
+    }
+  },
+  "contaminationPurged": [
+    "src/data/imported-schedules/lacoruna.json",
+    "src/data/imported-schedules/kotor.json",
+    "src/data/imported-schedules/laspalmas.json"
+  ],
+  "wireSchedulesTs": {
+    "wired": true,
+    "reason": "import wired"
+  }
+}

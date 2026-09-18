@@ -5,7 +5,7 @@ import {
   getMonthsWithEntries,
   type ScheduleYear,
 } from "@/lib/schedule-utils";
-import laspalmasSchedule from "./imported-schedules/laspalmas.json";
+import lasPalmasSchedule from "./imported-schedules/las-palmas.json";
 
 const SCHEDULE_FAQS = [
   {
@@ -34,7 +34,7 @@ const SCHEDULE_TIPS = [
 
 export const schedulePorts: ShipSchedulePort[] = [
   {
-    slug: "laspalmas",
+    slug: "las-palmas",
     name: "Las Palmas de Gran Canaria",
     country: "Spain",
     seoTitle: "Las Palmas Cruise Ship Schedule Overview",
@@ -51,7 +51,7 @@ export const schedulePorts: ShipSchedulePort[] = [
 ];
 
 const schedulesByPort: Record<string, ScheduleEntry[]> = {
-  laspalmas: (laspalmasSchedule as ScheduleEntry[]) ?? [],
+  "las-palmas": (lasPalmasSchedule as ScheduleEntry[]) ?? [],
 };
 
 export const scheduleYears: ScheduleYear[] = [2026, 2027];
